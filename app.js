@@ -1,5 +1,6 @@
 import express from 'express';
 import demoRouter from './routers/demo.router.js';
+import wpRouter from './routers/wp.router.js';
 
 //! Initialisation et configuration de la WebAPI
 const app = express();
@@ -10,6 +11,7 @@ const { PORT } = process.env;
 
 //! Définition des routes
 app.use('/demo', demoRouter);
+app.use('/wp/v2', wpRouter);
 
 //! Démarrage de la WebAPI
 app.listen(PORT, () => {
