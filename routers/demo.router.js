@@ -3,7 +3,7 @@
 //? Littéralement, il sert d'aiguillage dans notre application
 
 import express from 'express';
-import { guessNumber, helloWorld } from '../controllers/demo.controller.js';
+import { guessNumber, helloWorld, readPostMsg } from '../controllers/demo.controller.js';
 // import * as demoController from './../controllers/demo.controller.js';
 
 // Choix pour les imports quand il n'y a pas de "export default" : 
@@ -13,7 +13,8 @@ import { guessNumber, helloWorld } from '../controllers/demo.controller.js';
 const demoRouter = express.Router();
 
 demoRouter.route('/hello')
-    .get(helloWorld);
+    .get(helloWorld)
+    .post(readPostMsg);
 
 demoRouter.route('/guess/:nb')
     .get(guessNumber);

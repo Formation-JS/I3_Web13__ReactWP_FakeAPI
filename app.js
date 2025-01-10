@@ -3,6 +3,9 @@ import demoRouter from './routers/demo.router.js';
 
 //! Initialisation et configuration de la WebAPI
 const app = express();
+app.use(express.json());               // json
+// app.use(express.urlencoded());      // x-www-form-urlencoded (formulaire)
+
 const { PORT } = process.env;
 
 //! Définition des routes
