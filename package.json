@@ -1,0 +1,26 @@
+{
+  "name": "fake-api-wp",
+  "version": "0.1.0",
+  "description": "Fake API pour envoyer des reponses comme WP",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env app.js",
+    "dev": "nodemon --env-file=.env app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "I3",
+    "API",
+    "WP",
+    "React"
+  ],
+  "author": "Aurélien",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
