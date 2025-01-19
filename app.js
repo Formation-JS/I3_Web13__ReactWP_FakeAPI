@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import demoRouter from './routers/demo.router.js';
 import wpRouter from './routers/wp.router.js';
 
@@ -6,6 +7,7 @@ import wpRouter from './routers/wp.router.js';
 const app = express();
 app.use(express.json());               // json
 // app.use(express.urlencoded());      // x-www-form-urlencoded (formulaire)
+app.use(cors());
 
 const { PORT } = process.env;
 
